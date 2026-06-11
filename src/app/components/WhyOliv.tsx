@@ -31,18 +31,10 @@ export const WhyOliv = () => {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-serif text-[#6a1533] mb-4"
           >
-            ¿Por qué OLIV?
+            Cambiar la prisa por la calma<br />
+            <span className="italic font-light">de lo esencial, es buen vivir</span>
           </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.6 }}
-            className="text-xl md:text-2xl font-serif text-[#ef8000] mb-4 italic"
-          >
-            OLIV no Improvisa, OLIV decide. 
-          </motion.p>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

@@ -1,15 +1,21 @@
 import { motion } from "motion/react";
-import { Plus } from "lucide-react";
 
 // Importing specific gallery images
-import img1 from "@/assets/24f0cbc70e74c25c9499d5af51ef48642fc6e71d.webp";
-import img2 from "@/assets/2f9ae18fc947bec354c5b8689cbd4bd6ed95cdc5.webp";
-import img3 from "@/assets/4c62c95b6a44466c93ff928caebde05091f3cbb1.webp";
-import img4 from "@/assets/6c54e51edc3a6295aed8d9f46d17d46b011bdbbf.webp";
-import img5 from "@/assets/46d1721f9b01f42b713e78528dea0c805fde04fd.webp";
-import img6 from "@/assets/685202cb36a929d95b2f5d55dbf3dd08d5674cf1.webp";
+import img1 from "@/assets/Gemini Oliv Sala.webp";
+import img2 from "@/assets/Gemini_canchatenis.webp";
+import img3 from "@/assets/Gemini_Liva_Vista_Botanica.webp";
+import img4 from "@/assets/Gemini_Pilates.webp";
+import img5 from "@/assets/Gemini_Piscina.webp";
+import img6 from "@/assets/Gemini_senderos_ caminata.webp";
 
-const images = [img1, img2, img3, img4, img5, img6];
+const images = [
+  { src: img1, label: "Sala" },
+  { src: img2, label: "Cancha de tenis" },
+  { src: img3, label: "Vista botánica" },
+  { src: img4, label: "Pilates" },
+  { src: img5, label: "Piscina" },
+  { src: img6, label: "Senderos" },
+];
 
 export const Gallery = () => {
   return (
@@ -23,28 +29,28 @@ export const Gallery = () => {
         </p>
       </div>
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
-        {images.map((image, index) => (
+      <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-0.5 lg:gap-0">
+        {images.map(({ src, label }, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1, duration: 0.6 }}
-            className="relative group cursor-pointer overflow-hidden h-[400px]"
+            className="relative group cursor-pointer overflow-hidden h-[220px] md:h-[300px] lg:h-[400px]"
           >
             <img
-              src={image}
-              alt={`Detalle OLIV ${index + 1}`}
+              src={src}
+              alt={label}
               className="w-full h-full object-cover block transform transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
               decoding="async"
             />
-            {/* Overlay on hover */}
-            <div className="absolute inset-0 bg-[#6a1533]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white transform scale-0 group-hover:scale-100 transition-transform duration-300 delay-75">
-                <Plus size={32} />
-              </div>
+            {/* Mobile + tablet: overlay siempre visible. Desktop: sube al hover */}
+            <div className="absolute inset-x-0 bottom-0 h-28 lg:h-40 bg-gradient-to-t from-black/65 to-transparent lg:translate-y-full lg:group-hover:translate-y-0 transition-transform duration-500 ease-out flex items-end px-3 lg:px-6 pb-3 lg:pb-6">
+              <span className="text-white font-serif text-sm md:text-base lg:text-xl italic lg:opacity-0 lg:group-hover:opacity-100 lg:transition-opacity lg:duration-300 lg:delay-150 drop-shadow-md leading-snug">
+                {label}
+              </span>
             </div>
           </motion.div>
         ))}

@@ -30,18 +30,46 @@ export const Hero = () => {
             Una inversión diseñada para <br className="hidden md:block" />
             <span className="italic font-light">quienes valoran la solidez y el buen vivir.</span>
           </h1>
-          <p className="text-white/90 text-lg md:text-xl font-sans font-light mb-10 max-w-2xl mx-auto md:mx-0 tracking-wide">
-            Mucho más que un proyecto; es un activo con criterio donde la baja densidad y el diseño consciente garantizan valorización sólida y rentabilidad en la zona norte de Cartagena.
-          </p>
-          
-          <Link
-            to="lead-form"
-            smooth={true}
-            duration={800}
-            className="inline-block px-8 py-4 bg-[#572433] text-white font-sans font-medium tracking-wide hover:bg-[#4a1f2b] transition-all transform hover:scale-105 rounded-full cursor-pointer shadow-lg"
+          <motion.ul
+            initial="hidden"
+            animate="visible"
+            variants={{ visible: { transition: { staggerChildren: 0.1, delayChildren: 0.5 } } }}
+            className="mb-10 max-w-2xl mx-auto md:mx-0 space-y-3"
           >
-            Quiero mi Acceso al Plan Fundadores
-          </Link>
+            {[
+              "El proyecto con más verde de la Zona Norte",
+              "7 hectáreas · 9 torres · Amenidades",
+              "Baja densidad por diseño, no por accidente",
+              "Con un corredor biológico natural que llega al mar",
+            ].map((item) => (
+              <motion.li
+                key={item}
+                variants={{
+                  hidden: { opacity: 0, x: -14 },
+                  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] } },
+                }}
+                className="flex items-center gap-3 text-white/90 text-base md:text-lg font-sans font-light tracking-wide drop-shadow-md"
+              >
+                <span className="w-2 h-2 rounded-full bg-[#e8a0b0] shrink-0 shadow-[0_0_6px_2px_rgba(232,160,176,0.45)]" />
+                {item}
+              </motion.li>
+            ))}
+          </motion.ul>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.1, duration: 0.5, ease: "easeOut" }}
+          >
+            <Link
+              to="lead-form"
+              smooth={true}
+              duration={800}
+              className="inline-block px-8 py-4 bg-[#572433] text-white font-sans font-medium tracking-wide hover:bg-[#4a1f2b] transition-all transform hover:scale-105 rounded-full cursor-pointer shadow-lg hover:shadow-xl"
+            >
+              Registrarme al Plan Fundadores
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
 

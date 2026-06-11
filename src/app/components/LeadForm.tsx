@@ -7,7 +7,7 @@ export const LeadForm = () => {
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-serif text-[#6a1533] mb-4">
-            Asegura tu rentabilidad en el Plan Fundadores
+            Regístrate y accede a precio de lanzamiento
           </h2>
           <p className="text-gray-500 font-sans max-w-2xl mx-auto">
             Los proyectos más exitosos no son los que prometen más, sino los que se diseñan con criterio.

@@ -17,18 +17,20 @@ export const Concept = () => {
           >
             <div className="max-w-xl">
               <h2 className="text-4xl md:text-5xl font-serif text-[#6a1533] leading-tight mb-8">
-                Cartagena crece. <br />
-                <span className="italic font-light">¿Tu inversión también?</span>
+                ¿Por qué OLIV <br /><span className="italic font-light">es diferente?</span>
               </h2>
               <div className="prose prose-lg text-gray-600 font-sans font-light leading-relaxed">
                 <p className="mb-6">
-                  En un mercado de promesas rápidas, la verdadera valorización nace de las decisiones conscientes.
+                  Cartagena no se detiene y tu inversión no debería quedarse atrás.
                 </p>
                 <p className="mb-6">
-                  Invertir bien es entender que la calidad de vida y la rentabilidad deben caminar juntas.
+                  En un mercado donde todos construyen más, en OLIV decidimos construir mejor. Con menor densidad, mayor verde y más criterio: las condiciones exactas que hacen que un activo se valorice de forma sostenida.
+                </p>
+                <p className="mb-6">
+                  Elegimos baja densidad, pusimos la vegetación en los planos antes que el concreto. Y diseñamos cada decisión con una intención clara: crear un activo que se disfruta hoy y se valoriza inevitablemente en el futuro.
                 </p>
                 <p>
-                  Al elegir un proyecto donde cada decisión estratégica está diseñada para proteger tu valorización, aseguras un activo que se disfruta hoy y se valora inevitablemente en el futuro.
+                  No es un proyecto que promete naturaleza en el catálogo — es un proyecto donde la naturaleza tiene dirección de obra.
                 </p>
               </div>
             </div>
@@ -44,7 +46,7 @@ export const Concept = () => {
           >
              <div className="relative z-10 bg-white p-5 md:p-8 rounded-xl shadow-2xl border border-gray-100 w-full">
                <div className="mb-4">
-                 <h3 className="text-xl md:text-2xl font-serif text-[#6a1533] mb-2 leading-tight">Asegura tu rentabilidad en el Plan Fundadores</h3>
+                 <h3 className="text-xl md:text-2xl font-serif text-[#6a1533] mb-2 leading-tight">Regístrate y accede a precio de lanzamiento</h3>
                  <p className="text-gray-500 font-sans text-xs md:text-sm">Los proyectos más exitosos no son los que prometen más, sino los que se diseñan con criterio.</p>
                </div>
                
